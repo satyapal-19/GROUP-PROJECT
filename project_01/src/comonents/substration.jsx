@@ -1,10 +1,36 @@
 function Subtraction() {
-  const a = 10;
-  const b = 5;
+
+  function handleSubtract() {
+    const num1 = document.getElementById("sub1").value;
+    const num2 = document.getElementById("sub2").value;
+
+    const difference = Number(num1) - Number(num2);
+
+    document.getElementById("subResult").innerText =
+      "Result: " + difference;
+  }
 
   return (
-    <div className="bg-white p-4 rounded shadow w-64 text-center">
-      Subtraction: {a} − {b} = {a - b}
+    <div style={{ padding: "20px" }}>
+      <h2>Subtraction Calculator</h2>
+
+      <input
+        type="number"
+        id="sub1"
+        placeholder="Enter first number"
+      />
+      <br /><br />
+
+      <input
+        type="number"
+        id="sub2"
+        placeholder="Enter second number"
+      />
+      <br /><br />
+
+      <button onClick={handleSubtract}>Subtract</button>
+
+      <h3 id="subResult"></h3>
     </div>
   );
 }
