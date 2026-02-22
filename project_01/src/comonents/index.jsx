@@ -1,6 +1,6 @@
 import React from "react";
 import Addition from "./addition";
-import Subtraction from "./subtraction";
+import Subtraction from "./substration";
 import Multiplication from "./multiplication";
 import Division from "./division";
 function App() {
